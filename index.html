@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="survey.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1356px;
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">My Survey Form</h1>
+            <p id="description"><em>Thank you for taking time to help us communicate.</em></p>
+        </header>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">
+                Name
+            </label>
+                <input id="name" class="form-control" type="text" placeholder="Enter your name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label id="email-label" for="email">
+            Email
+        </label>
+                <input id="email" class="form-control" type="email" placeholder="Enter your email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label id="age-label" for="age">
+            Age <span class="clue">(optional)</span>
+        </label>
+                <input id="age" class="form-control" type="number" name="age" placeholder="Enter your age" min="10" max="99">
+            </div>
+
+            <div class="form-group">
+                <p>Which option best describes your current role?</p>
+                <select id="dropdown" name="role" required>
+            <option disabled="" value="" selected="">Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full time job</option>
+            <option value="learner">Full time Learner</option>
+            <option value="preferNo">prefer not to say</option>
+            <option value="other">Other</option>
+        </select>
+            </div>
+
+            <div class="form-group">
+                <p>Would you recommend working with me to a friend</p>
+                <label>
+            <input type="radio" class="input-radio" name="user" value="definitly" checked>
+            Definitly
+        </label>
+                <label>
+            <input type="radio" class="input-radio" name="user" value="maybe">
+            Maybe
+        </label>
+                <label>
+            <input type="radio" class="input-radio" name="user" value="notsure">
+            Not sure
+        </label>
+            </div>
+
+            <div class="form-group">
+                <p>What would you like to be improved? <span class="clue">(check all that apply)</span></p>
+                <label>
+                <input id="front-end" name="front-end" value="front-end" type="checkbox" class="input-checkbox">
+                Front-end  
+            </label>
+                <label>
+                <input id="back-end" name="back-end" value="back-end" type="checkbox" class="input-checkbox">
+                Back-end  
+            </label>
+                <label>
+                <input id="data-visualization" name="data-visualization" value="data-visualization" type="checkbox" class="input-checkbox">
+                Data visualization  
+            </label>
+                <label>
+                <input id="meet-ups" name="meet-ups" value="meet-ups" type="checkbox" class="input-checkbox">
+                Meet ups  
+            </label>
+            </div>
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea id="comments" name="comments" class="input-textarea" placeholder="Enter your comments here..."></textarea>
+            </div>
+            <div class="form-group">
+                <button id="submit" type="submit" class="btn btn-success">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
